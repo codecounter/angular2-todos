@@ -6,8 +6,8 @@ import { Todo } from './todo';
     selector: 'todos',
     template: `
    	<form>
-    	<input #addText type="text" />
-    	<button (click)="onAddClicked(addText.value)">Add</button>
+    	<input #addText type="text" value="" />
+    	<button (click)="onAddClicked(addText.value);addText.value = '';">Add</button>
     </form>
     <h3>unfinished</h3>
     <ul class="unchecked" *ngIf="uncheckedTodos.length">
